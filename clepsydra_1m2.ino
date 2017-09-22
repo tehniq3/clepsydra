@@ -10,6 +10,7 @@ http://www.arduinotehniq.com/
 CLEPSYDRA - write by Nicu FLORICA (niq_ro) for Biyachie
 ver.1.0 - initial version (20.09.2017)
 ver.1.1 - made basic function (22.09.2017)
+ver.1.2 - store value in EEPROM memory (22.09.2017)
 */
 
 #include "EEPROM.h"// http://tronixstuff.com/2011/03/16/tutorial-your-arduinos-inbuilt-eeprom/
