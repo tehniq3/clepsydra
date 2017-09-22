@@ -11,8 +11,6 @@ CLEPSYDRA - write by Nicu FLORICA (niq_ro) for Biyachie
 ver.1 - initial version
 */
 
-#include "EEPROM.h"// http://tronixstuff.com/2011/03/16/tutorial-your-arduinos-inbuilt-eeprom/
-
 int digit1 = 11; //PWM pin for control digit 1 (left side)
 int digit2 = 10; //PWM pin for control digit 2
 int digit3 = 9;  //PWM pin for control digit 3
