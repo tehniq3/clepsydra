@@ -131,8 +131,8 @@ numaratoare = EEPROM.read(102) + 256*EEPROM.read(103);
 if (timp > timpmax) 
 {
   timp = 1; // if is wrong value in EEPROM memory punt minimum value
-  EEPROM.write(100,1);
-  EEPROM.write(101,0); 
+  EEPROM.write(100,0);
+  EEPROM.write(101,1); 
 }
 if (numaratoare > numaratoaremax) 
 {
@@ -158,8 +158,8 @@ if (!(digitalRead(uppin)))
   if (timp > timpmax) timp = timpmax;
   timp1 = timp/256;
   timp2 = timp - 256*timp1;
-  EEPROM.write(100,timp1);
-  EEPROM.write(101,timp2); 
+  EEPROM.write(100,timp2);
+  EEPROM.write(101,timp1); 
   timpramas = timp;
   delay(250);
  }
@@ -172,8 +172,8 @@ if (!(digitalRead(downpin)))
   if (timp <=0) timp = 1;
   timp1 = timp/256;
   timp2 = timp - 256*timp1;
-  EEPROM.write(100,timp1);
-  EEPROM.write(101,timp2); 
+  EEPROM.write(100,timp2);
+  EEPROM.write(101,timp1); 
   timpramas = timp;
   delay(250);
  }
@@ -191,8 +191,8 @@ if (!(digitalRead(start1)))
   if (numaratoare > numaratoaremax) numaratoare = 0; // reset value
   numaratoare1 = numaratoare/256;
   numaratoare2 = numaratoare - 256*numaratoare1;
-  EEPROM.write(102,numaratoare1);
-  EEPROM.write(103,numaratoare2); 
+  EEPROM.write(102,numaratoare2);
+  EEPROM.write(103,numaratoare1); 
   delay(1000);
   digitalWrite(ledpin, HIGH);
   meniu = 1;
@@ -204,8 +204,8 @@ if (!(digitalRead(start2)))
   if (numaratoare > numaratoaremax) numaratoare = 0; // reset value
   numaratoare1 = numaratoare/256;
   numaratoare2 = numaratoare - 256*numaratoare1;
-  EEPROM.write(102,numaratoare1);
-  EEPROM.write(103,numaratoare2); 
+  EEPROM.write(102,numaratoare2);
+  EEPROM.write(103,numaratoare1); 
   delay(1000);
   digitalWrite(ledpin, HIGH);
   meniu = 1;
@@ -581,3 +581,4 @@ void displayNumber1(int toDisplay) {
     digitalWrite(segDP, SEGMENT_OFF);
 }
 } 
+
