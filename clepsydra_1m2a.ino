@@ -126,7 +126,7 @@ digitalWrite(ledpin, LOW);
 //EEPROM.write(103,0); 
 
 timp = EEPROM.read(100) + 256*EEPROM.read(101);
-numaratoare = EEPROM.read(102) + 256*EEPROM.read(101);
+numaratoare = EEPROM.read(102) + 256*EEPROM.read(103);
 
 if (timp > timpmax) 
 {
